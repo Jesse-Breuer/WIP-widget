@@ -1,0 +1,45 @@
+[{  
+   "firstname":"John",
+   "lastname":"smith",
+   "category":"Account Maintenance",
+   "categoryId":"1",
+   "status":"Work in Progress",
+   "statusId":"2",
+   "caseId":"1"
+}, 
+{  
+   "firstname":"Mary",
+   "lastname":"smith",
+   "category":"Account Maintenance",
+   "categoryId":"1",
+   "status":"Work in Progress",
+   "statusId":"2",
+   "caseId":"2"
+}, 
+{  
+   "firstname":"Dave",
+   "lastname":"smith",
+   "category":"Account Maintenance",
+   "categoryId":"1",
+   "status":"Work in Progress",
+   "statusId":"2",
+   "caseId":"3"
+},
+{  
+   "firstname":"Mary Follow",
+   "lastname":"smith",
+   "category":"Cashiering",
+   "categoryId":"2",
+   "status":"Follow Up Required",
+   "statusId":"1",
+   "caseId":"4"
+}, 
+{  
+   "firstname":"Dave Follow",
+   "lastname":"smith",
+   "category":"Cashiering",
+   "categoryId":"2",
+   "status":"Follow Up Required",
+   "statusId":"1",
+   "caseId":"5"
+}]

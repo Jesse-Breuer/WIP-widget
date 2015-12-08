@@ -8,10 +8,13 @@
  * Controller of the wipApp
  */
 angular.module('wipApp')
-  .controller('ExpandedCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ExpandedCtrl', function ($scope, $routeParams, $http, $filter) {
+
+
+  $http.get('/data/cases.json')
+       .then(function(res){
+          $scope.cases = res.data
+           $scope.case = $filter("filter")(res.data, {caseId: $routeParams.caseId})[0];
+        })
+
   });
