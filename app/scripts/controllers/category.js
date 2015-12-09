@@ -11,6 +11,7 @@ angular.module('wipApp')
   .controller('CategoryCtrl', function ($scope, $routeParams, $http, $filter) {
      $http.get('/data/cases.json')
        .then(function(res){
-          $scope.case = $filter("filter")(res.data, {caseId: $routeParams.caseId})[0];
+       	  $scope.cases = res.data;
+          $scope.case = $filter("filter")(res.data, {caseId: $routeParams.categoryId})[0];
         })
   });

@@ -1,3 +1,9 @@
 <p>This is the category view.</p>
 
- {{case.lastname}}
+
+  <ul ng-repeat="(key, value) in cases | groupBy: 'category' ">
+   <li> {{ key }} ({{value.length}})</li>
+  </ul>
+
+
+

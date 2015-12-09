@@ -1,6 +1,19 @@
 <div class="container">
   <h2>Main</h2>
-  <ul ng-repeat="case in cases">
-    <li>{{case.firstname}}</li>
+<!--   <ul ng-repeat="case in cases ">
+    <li>{{case.category}}</li>
+  </ul> -->
+   <span ng-repeat="(key, value) in cases | groupBy: 'status' ">
+   {{ key }}
+
+
+   <ul ng-repeat="(key, value) in cases | groupBy: 'category' ">
+   <li> 
+    <div class="category-heading">{{ key }} ({{value.length}})</div>
+    <div ng-repeat="(key, value) in cases | groupBy: 'lastname' " class="case-count">{{ key }} ({{value.length}})</div>
+
+   </li>
   </ul>
+
+    </span>
 </div>
