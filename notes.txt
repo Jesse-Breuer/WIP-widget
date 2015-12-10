@@ -1,0 +1,5 @@
+http://localhost:9000/#/category
+http://localhost:9000/#/expanded
+http://localhost:9000/#/case
+http://localhost:9000/#/notify
+
