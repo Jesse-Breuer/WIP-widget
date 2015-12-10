@@ -8,8 +8,9 @@
 
 
    <ul ng-repeat="(key, value) in cases | groupBy: 'category' ">
-   <li> 
-    <div class="category-heading">{{ key }} ({{value.length}})</div>
+   <!--<li ng-repeat="case in value"> -->
+   <li  ng-repeat="case in value" ng-if="$first">
+    <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a></div>
     <div ng-repeat="(key, value) in cases | groupBy: 'lastname' " class="case-count">{{ key }} ({{value.length}})</div>
 
    </li>
