@@ -1,9 +1,44 @@
 <p>This is the category view.</p>
 
 
-  <ul ng-repeat="(key, value) in cases | groupBy: 'category' ">
-   <li> {{ key }} ({{value.length}})</li>
+
+   <ul ng-repeat="(key, value) in cases | groupBy: 'category' ">
+   <!--<li ng-repeat="case in value"> -->
+   <li  ng-repeat="case in value" ng-if="$first">
+    <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a> category id = {{case.categoryId}}</div>
+    <div ng-repeat="(key, value) in cases | groupBy: 'lastname' " class="case-count">{{ key }} ({{value.length}})</div>
+    <!--start conditional-->
+    <!--{{case.categoryId == routeCategoryId ? "it's true" : "it's false"}}-->
+    <div ng-if="case.categoryId == routeCategoryId">
+      <ul>
+       <li  ng-repeat="(key, value) in filteredCases | groupBy: 'category' ">
+        <div class="category-heading"><a ng-href="#/category/{{value.categoryId}}">{{ key }} ({{value.length}})</a></div>
+        <ul>
+          <li ng-repeat="case in filteredCases" class="case-count">
+            <div>{{case.firstname}} {{case.lastname}} ID: {{case.caseId}}</div>
+            <div>Submitted: 11/13/15 Status Image Review</div>
+          </li>
+        </ul>
+      </div> 
+      <!--end conditional-->
+  </li>
   </ul>
+
+<!--    <ul>
+   <li  ng-repeat="(key, value) in filteredCases | groupBy: 'category' ">
+    <div class="category-heading"><a ng-href="#/category/{{value.categoryId}}">{{ key }} ({{value.length}})</a></div>
+    <ul>
+      <li ng-repeat="case in filteredCases" class="case-count">
+        <div>{{case.firstname}} {{case.lastname}} ID: {{case.caseId}}</div>
+        <div>Submitted: 11/13/15 Status Image Review</div>
+      </li>
+    </ul> -->
+   
+
+   </li>
+  </ul>
+
+    <!-- </span> -->
 
 
 
