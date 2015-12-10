@@ -28,10 +28,6 @@ angular
         templateUrl: 'views/category.html',
         controller: 'CategoryCtrl'
       })
-      .when('/expanded/:caseId', {
-        templateUrl: 'views/expanded.html',
-        controller: 'ExpandedCtrl'
-      })
       .when('/case/:caseId', {
         templateUrl: 'views/case.html',
         controller: 'CaseCtrl'

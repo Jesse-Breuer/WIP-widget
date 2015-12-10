@@ -1,3 +1,22 @@
 <p>This is the notify view.</p>
 
- {{case.lastname}}
+<div>
+
+	<h2>Notify Case Owner</h2>
+	<h2>Case {{case.caseId}} Title: {{case.firstname}} {{case.lastname}} ({{case.caseId}})</h2>
+
+Attach Files
+<form action=""><textarea name="" id="" cols="30" rows="10"></textarea></form>
+
+
+<a ng-href="#/case/{{case.caseId}}">
+	<button>
+		Cancel
+	</button>
+</a>
+<a ng-href="/#/">
+	<button>
+		Submit
+	</button>
+</a>
+</div>

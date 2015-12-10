@@ -9,7 +9,6 @@
  */
 angular.module('wipApp')
   .controller('CaseCtrl', function ($scope, $routeParams, $http, $filter) {
-    //$scope.caseId = $routeParams.caseId;
 
     $http.get('/data/cases.json')
        .then(function(res){
