@@ -5,7 +5,9 @@
    "categoryId":"1",
    "status":"Work in Progress",
    "statusId":"2",
-   "caseId":"1"
+   "caseId":"1",
+   "condition": "open",
+   "submitted": "11/15/15"
 }, 
 {  
    "firstname":"Mary",
@@ -14,7 +16,9 @@
    "categoryId":"1",
    "status":"Work in Progress",
    "statusId":"2",
-   "caseId":"2"
+   "caseId":"2",
+   "condition": "open",
+   "submitted": "11/15/15"
 }, 
 {  
    "firstname":"Dave",
@@ -23,23 +27,29 @@
    "categoryId":"1",
    "status":"Work in Progress",
    "statusId":"2",
-   "caseId":"3"
+   "caseId":"3",
+   "condition": "open",
+   "submitted": "11/15/15"
 },
 {  
-   "firstname":"Mary Follow",
-   "lastname":"smith",
+   "firstname":"Mary",
+   "lastname":"Jones",
    "category":"Cashiering",
    "categoryId":"2",
    "status":"Follow Up Required",
    "statusId":"1",
-   "caseId":"4"
+   "caseId":"4",
+   "condition": "open",
+   "submitted": "11/15/15"
 }, 
 {  
-   "firstname":"Dave Follow",
-   "lastname":"smith",
+   "firstname":"Dave",
+   "lastname":"Jones",
    "category":"Cashiering",
    "categoryId":"2",
    "status":"Follow Up Required",
    "statusId":"1",
-   "caseId":"5"
+   "caseId":"5",
+   "condition": "open",
+   "submitted": "11/15/15"
 }]

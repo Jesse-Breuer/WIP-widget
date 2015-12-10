@@ -1,0 +1,9 @@
+.pointer{
+	/* restyle this hover you want, just indicating clickability */
+	cursor:pointer;
+	color: #229;
+}
+
+.pointer:hover{
+	text-decoration: underline;
+}
