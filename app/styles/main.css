@@ -81,3 +81,10 @@ body {
     border-bottom: 0;
   }
 }
+
+
+.wip_widget {
+  float: right;
+  width: 400px;
+  height: 500px;
+}

@@ -1,20 +1,30 @@
-<div class="container">
-  <h2>Main</h2>
-<!--   <ul ng-repeat="case in cases ">
+<div layout="column" layout-fill class="container">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>Main</span>
+      <span flex></span>
+      <md-button>
+        Right bar button
+      </md-button>
+    </div>
+  </md-toolbar>
+  <!--   <ul ng-repeat="case in cases ">
     <li>{{case.category}}</li>
   </ul> -->
-   <span ng-repeat="(key, value) in cases | groupBy: 'status' ">
-   {{ key }}
+  <md-content>
 
+    <section ng-repeat="(key, value) in cases | groupBy: 'status' ">
+      <md-subheader>{{key}}</md-subheader>
 
-   <ul ng-repeat="(key, value) in cases | groupBy: 'category' ">
-   <!--<li ng-repeat="case in value"> -->
-   <li  ng-repeat="case in value" ng-if="$first">
-    <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a></div>
-    <div ng-repeat="(key, value) in cases | groupBy: 'lastname' " class="case-count">{{ key }} ({{value.length}})</div>
+      <ul ng-repeat="(key, value) in cases | groupBy: 'category' ">
+        <!--<li ng-repeat="case in value"> -->
+        <li  ng-repeat="case in value" ng-if="$first">
+          <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a></div>
+          <div ng-repeat="(key, value) in cases | groupBy: 'lastname' " class="case-count">{{ key }} ({{value.length}})</div>
+        </li>
+      </ul>
 
-   </li>
-  </ul>
-
-    </span>
+    </section>
+    
+  </md-content>
 </div>
