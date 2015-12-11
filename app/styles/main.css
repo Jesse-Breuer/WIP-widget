@@ -88,3 +88,8 @@ body {
   width: 400px;
   height: 500px;
 }
+.item_block {
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
