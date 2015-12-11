@@ -18,7 +18,7 @@
       <md-list layout-padding="" ng-repeat="(key, value) in cases | groupBy: 'category' ">
         <md-list-item ng-repeat="case in value" class="md-whiteframe-1dp item_block" layout="column" layout-align="none start">
           <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a></div>
-          <div ng-repeat="(key, value) in cases | groupBy: 'lastname' | limitTo: 1: 1 " class="case-count">{{ key }} ({{value.length}})</div>
+          <div ng-repeat="(key, value) in cases | groupBy: 'lastname'" class="case-count">{{ key }} ({{value.length}})</div>
         </md-list-item>
       </md-list>
     </section>
