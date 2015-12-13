@@ -13,16 +13,55 @@
   </ul> -->
   <md-content style="height: 500px;">
 
-    <section ng-repeat="(key, value) in cases | groupBy: 'firstname' ">
+<!--     <section ng-repeat="(key, value) in cases | groupBy: 'status' ">
       <md-subheader class="md-primary">{{key}}</md-subheader>
-      <p>{{value}}</p>
-<!--       <md-list layout-padding="" ng-repeat="(key, value) in cases | groupBy: 'category' ">
+      <md-list layout-padding="" ng-repeat="(key, value) in cases | groupBy: 'category'">
+        <md-list-item ng-repeat="case in value" class="md-whiteframe-1dp item_block" layout="column" layout-align="none start">
+          <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a></div>
+          <div ng-repeat="(key, value) in cases | groupBy: 'lastname'" class="case-count">{{ key }} ({{value.length}})</div>
+        </md-list-item>
+      </md-list>
+    </section> -->
+
+<!--     <section ng-repeat="(key, value) in cases | groupBy: 'status'">
+      <md-subheader class="md-primary">{{key}}</md-subheader>
+      <md-list layout-padding="" ng-repeat="(key, value) in cases | groupBy: 'category'">
+        <md-list-item ng-repeat="case in value" class="md-whiteframe-1dp item_block" layout="column" layout-align="none start">
+          <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a></div>
+          <div ng-repeat="(key, value) in cases | groupBy: 'lastname'" class="case-count">{{ key }} ({{value.length}})</div>
+        </md-list-item>
+      </md-list>
+
+      <div ng-repeat="person in cases" data-ng-if="person.status == key">{{person.firstname}} {{person.status}}</div>
+    </section> -->
+   
+    <section ng-repeat="(status, value) in cases | groupBy: 'status'">
+      <md-subheader class="md-primary">{{status}}</md-subheader>
+<!--       <md-list layout-padding="" ng-repeat="(key, value) in cases | groupBy: 'category'">
         <md-list-item ng-repeat="case in value" class="md-whiteframe-1dp item_block" layout="column" layout-align="none start">
           <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a></div>
           <div ng-repeat="(key, value) in cases | groupBy: 'lastname'" class="case-count">{{ key }} ({{value.length}})</div>
         </md-list-item>
       </md-list> -->
+      
+
+      <md-list layout-padding="" ng-repeat="(category, value) in cases | groupBy: 'category'" >
+<!--         <md-list-item ng-repeat="person in case" class="md-whiteframe-1dp item_block" layout="column" layout-align="none start">
+          <div class="category-heading"><a ng-href="#/category/{{case.categoryId}}">{{ key }} ({{value.length}})</a></div>
+          <div ng-repeat="(key, value) in cases | groupBy: 'lastname'" class="case-count">{{ key }} ({{value.length}})</div>
+          <p>{{person.firstname}} {{person.status}} {{person.category}}</p>
+        </md-list-item> -->
+        {{category}}
+        <div ng-repeat="person in cases" data-ng-if="person.status == status && person.category == category">{{person.firstname}} {{person.status}} {{person.category}}</div>
+      </md-list>
+
+      <!-- <div ng-repeat="person in cases" data-ng-if="person.status == key">{{person.firstname}} {{person.status}} {{person.category}}</div> -->
+
     </section>
-    
+
+     
+
+
+
   </md-content>
 </div>
