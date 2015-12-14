@@ -29,11 +29,11 @@ angular
         templateUrl: 'views/category.html',
         controller: 'CategoryCtrl'
       })
-      .when('/case/:caseId', {
+      .when('/case/:casenumber', {
         templateUrl: 'views/case.html',
         controller: 'CaseCtrl'
       })
-      .when('/notify/:caseId', {
+      .when('/notify/:casenumber', {
         templateUrl: 'views/notify.html',
         controller: 'NotifyCtrl'
       })

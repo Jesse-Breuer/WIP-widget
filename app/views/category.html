@@ -12,9 +12,9 @@
        <li ng-repeat="(key, value) in filteredCases | groupBy: 'category'">
         <ul>
           <li class="pointer case-count" ng-repeat="case in filteredCases">
-            <div ng-click="detail(case.caseId, $index)">{{case.firstname}} {{case.lastname}} ID: {{case.caseId}} </div> 
-            <div ng-show="selected.value!=$index" ng-click="detail(case.caseId, $index)">Submitted: {{case.submitted}} Status {{case.status}}</div>
-             <div><a ng-href="#/case/{{case.caseId}}">Case View</a></div>
+            <div ng-click="detail(case.casenumber, $index)">{{case.firstname}} {{case.lastname}} ID: {{case.casenumber}} </div> 
+            <div ng-show="selected.value!=$index" ng-click="detail(case.casenumber, $index)">Submitted: {{case.submitted}} Status {{case.status}}</div>
+             <div><a ng-href="#/case/{{case.casenumber}}">Case View</a></div>
             <div ng-show="selected.value==$index">
               <div ng-include src="templateURL"></div>
             </div>

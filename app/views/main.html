@@ -12,8 +12,9 @@
     <section ng-repeat="(status, value) in cases | groupBy: 'status'">
       <md-subheader class="md-primary">{{status}}</md-subheader>
       <md-list layout-padding="" class="md-whiteframe md-whiteframe-1dp" ng-repeat="(category, value) in cases | groupBy: 'category'" >
-        {{category}} ({{category.length}})
-        <div ng-repeat="person in cases" data-ng-if="person.status == status && person.category == category">{{person.firstname}} {{person.lastname}}</div>
+{{catPerson = cases[0]; ""}}
+        <a ng-href="#/category/{{catPerson.categoryId}}">{{category}} ({{category.length}})</a></span>
+        <div ng-repeat="person in cases" data-ng-if="person.status == status && person.category == category"><a ng-href="#/case/{{person.casenumber}}">{{person.firstname}} {{person.lastname}}</a></div>
       </md-list>
     </section>
   </md-content>

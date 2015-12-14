@@ -14,7 +14,7 @@ angular.module('wipApp')
   $http.get('/data/cases.json')
        .then(function(res){
           $scope.cases = res.data
-           $scope.case = $filter("filter")(res.data, {caseId: $routeParams.caseId})[0];
+           $scope.case = $filter("filter")(res.data, {casenumber: $routeParams.casenumber})[0];
         })
 
   });
