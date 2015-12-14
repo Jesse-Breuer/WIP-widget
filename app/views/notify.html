@@ -9,14 +9,6 @@ Attach Files
 <form action=""><textarea name="" id="" cols="30" rows="10"></textarea></form>
 
 
-<a ng-href="#/case/{{case.casenumber}}">
-	<button>
-		Cancel
-	</button>
-</a>
-<a ng-href="/#/">
-	<button>
-		Submit
-	</button>
-</a>
+<md-button class="md-raised md-primary" ng-href="/#/">Submit</md-button>
+<md-button class="md-raised md-secondary" ng-href="#/case/{{case.casenumber}}">Cancel</md-button>
 </div>

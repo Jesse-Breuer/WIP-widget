@@ -3,14 +3,12 @@
     <div class="md-toolbar-tools">
       <span>Main</span>
       <span flex></span>
-      <md-button>
-        Right bar button
-      </md-button>
+      <md-button>Right bar button</md-button>
     </div>
   </md-toolbar>
   <md-content style="height: 500px;">
     <section ng-repeat="(status, value) in cases | groupBy: 'status'">
-      <md-subheader class="md-primary">{{status}}</md-subheader>
+    <md-subheader class="md-primary">{{status}}</md-subheader>
       <md-list layout-padding="" class="md-whiteframe md-whiteframe-1dp" ng-repeat="(category, value) in cases | groupBy: 'category'" >
         {{catPerson = cases[$index]; ""}}
         <p class="md-title"><a ng-href="#/category/{{catPerson.categoryId}}">{{category}} ({{category.length}})</a></p>
