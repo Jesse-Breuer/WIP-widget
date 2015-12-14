@@ -12,7 +12,7 @@
     <section ng-repeat="(status, value) in cases | groupBy: 'status'">
       <md-subheader class="md-primary">{{status}}</md-subheader>
       <md-list layout-padding="" class="md-whiteframe md-whiteframe-1dp" ng-repeat="(category, value) in cases | groupBy: 'category'" >
-        {{catPerson = cases[0]; ""}}
+        {{catPerson = cases[$index]; ""}}
         <p class="md-title"><a ng-href="#/category/{{catPerson.categoryId}}">{{category}} ({{category.length}})</a></p>
         <div class="md-body-1" ng-repeat="person in cases" data-ng-if="person.status == status && person.category == category"><a ng-href="#/case/{{person.casenumber}}">{{person.firstname}} {{person.lastname}}</a></div>
       </md-list>
